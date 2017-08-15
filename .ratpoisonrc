@@ -1,0 +1,76 @@
+# Request that Ratpoison stop staying hello to me
+startup_message off
+
+# Change the escape key to something sane
+
+escape s-space
+
+# Create sane window borders
+set border 5
+
+# Change window titles to resource classes instead of titles
+winname 
+
+# Unbind things that are not useful
+unbind C-g
+unbind C-Return
+unbind Return
+unbind C-V
+unbind C-underscore
+unbind C-u
+unbind U
+unbind space
+unbind C-space
+unbind C-b
+unbind r
+unbind C-r
+unbind f
+unbind C-f
+unbind m
+unbind C-m
+unbind C-v
+unbind C-w
+unbind C-x
+unbind i
+unbind C-i
+unbind k
+unbind C-k
+unbind C-K
+unbind C-A
+unbind C-n
+unbind C-p
+unbind C-apostrophe
+
+# Create some useful keybinds
+# If keys are already bound to a function then unbind them first
+
+# Designation of vertical splits are confusing
+unbind S
+unbind C-S
+bind V hsplit
+
+# Designation of horizontal splits are confusing
+unbind s
+unbind C-s
+bind H vsplit
+
+# Abort key needs to be defined as something sane
+bind Escape abort
+
+# Switch to an alternate Window Manager
+bind C-t tmpwm /usr/X11R6/bin/cwm
+
+# Time display mapped to 'a' makes my head hurt
+unbind C-a
+unbind a
+bind t time
+
+# Ensure that tmux is executed when a shell begins, and allow for a shell without tmux
+unbind c
+unbind C-c
+bind c exec /usr/X11R6/bin/xterm -e tmux
+bind C-c exec /usr/X11R6/bin/xterm
+
+# Change the "only" key to O instead of Q
+unbind Q
+bind O only
