@@ -1,0 +1,21 @@
+# C=Control M=Alt S=Shift 4=Windows
+# 1=left 2=middle 3=right 4=up 5=down
+
+# Let's unbind things that we don't need
+# Unbind CTL-AL-DEL if this is a VM on a Windows host
+# unbind-key CM-Delete
+unbind-key CM-Return
+
+# We need to identify window colors
+borderwidth 2
+color activeborder blue
+color inactiveborder darkblue
+gap 0 0 0 180
+
+# Make some useful program chords
+# If there is already a binding, unbind it first
+bind-key C-s menu-ssh
+bind-key CM-Return 'xterm +vb +sb -ls -fn 9x15 -bg black -fg green -geometry 80x30 -e tmux'
+
+# Add interesting applications to the app menu
+command "chromium browser"	chrome
