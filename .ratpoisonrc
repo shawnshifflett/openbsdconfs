@@ -68,9 +68,13 @@ bind t time
 # Ensure that tmux is executed when a shell begins, and allow for a shell without tmux
 unbind c
 unbind C-c
-bind c exec /usr/X11R6/bin/xterm -e tmux
-bind C-c exec /usr/X11R6/bin/xterm
+bind c exec /usr/X11R6/bin/xterm +vb +sb -ls -fn 9x15 -bg black -fg gray -geometry 80x30 -e tmux
+bind C-c exec /usr/X11R6/bin/xterm +vb +sb -ls -fn 9x15 -bg black -fg gray -geometry 80x30
 
 # Change the "only" key to O instead of Q
 unbind Q
 bind O only
+
+# Let's add applications
+unbind C
+bind C exec /usr/local/bin/chrome
